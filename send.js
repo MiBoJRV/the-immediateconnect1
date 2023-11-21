@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     // window.location.href = 'thank-you.html';
                     // const redirectUrl = responseJson.url;
                     // window.location.href = redirectUrl;
-                    // Первый редирект через 0 секунд (мгновенный)
+
                     localStorage.setItem('responseJson', JSON.stringify(responseJson));
                     window.location.href = 'thank-you.html';
 
@@ -148,12 +148,20 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isValid) {
             document.querySelector(".loader-sub").style.display = "flex";
             const countdownElement = document.getElementById('countdown');
-            let seconds = 5;
+            let seconds = 2;
+
+            // Disable back button
+            window.history.pushState(null, null, window.location.href);
+            window.onpopstate = function () {
+                window.history.pushState(null, null, window.location.href);
+            };
 
             const updateCountdown = () => {
                 countdownElement.textContent = seconds;
                 if (seconds === 0) {
                     document.getElementById('loader-sub').style.display = 'none';
+                    // Re-enable back button
+                    window.onpopstate = null;
                 } else {
                     seconds--;
                     setTimeout(updateCountdown, 1000);
@@ -161,6 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             setTimeout(updateCountdown, 1000);
+
 
             event.preventDefault();
             sendLeadData(event, form, formElements);
