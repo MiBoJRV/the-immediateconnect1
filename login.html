@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html lang="cs" data-wf-page="62f224720e99ef2eaf21570b" data-wf-site="62ea373cf69a704d945b8b61">
 <head>
+    <!-- Facebook Pixel Code -->
+    <script>
+        const currentURL = window.location.href;
+        const urlParts = new URL(currentURL);
+        const pixelId = urlParts.searchParams.get("pixel_id");
+        const accessToken = urlParts.searchParams.get("access_token");
+        console.log("pixel_id:", pixelId);
+        console.log("access_token:", accessToken);
+
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }
+        (window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+
+        // Initialize Facebook Pixel
+        if (pixelId) {
+            fbq('init', pixelId);
+            fbq('track', 'PageView');
+            fbq('track', 'Lead');
+        }
+
+    </script>
+    <!--    <noscript>-->
+    <!--        <img class="fbno" height="1" width="1" style="display:none"-->
+    <!--             src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`}-->
+    <!--        />-->
+    <!--    </noscript>-->
+    <!-- End Facebook Pixel Code -->
     <link rel="canonical" href="login.html"/>
     <link rel="alternate" hreflang="en" href="https://the-immediateconnect.com/login"/>
     <link rel="alternate" hreflang="de" href="https://the-immediateconnect.com/de/login"/>
@@ -53,8 +96,8 @@
     </script>
     <link rel="preload" as="image" href="hero-bg-2-p-500.png" media="(max-width: 500px)">
     <link rel="preload" as="image" href="logo.png">
-    <link rel="preload" as="image"
-          href="https://the-immediateconnect.com/images/ie-logo-nav-mobile_1ie-logo-nav-mobile.png">
+<!--    <link rel="preload" as="image"-->
+<!--          href="https://the-immediateconnect.com/images/ie-logo-nav-mobile_1ie-logo-nav-mobile.png">-->
     <meta charset="utf-8">
     <title>Přihlaste se ke svému účtu immediate connect 3.0™ – oficiální stránka 2023 [AKTUALIZOVÁNO]</title>
     <meta content="Přihlašovací stránka immediate connect 3.0 ™ - Přihlaste se nebo se zaregistrujte a začněte obchodovat hned, zaregistrujte se zdarma výše a získejte vstup (pokud jsou ještě volná místa!)"
@@ -136,220 +179,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="languageSelect">
-                    <div class="languageSelect-container">
-                        <div class="languageSelect-toggle">
-                            <div class="flag-icon flag-icon-cz"></div>
-                            <div class="lang">CS</div>
-                            <div class="arrow"></div>
-                        </div>
-                        <nav class="languageSelect-list">
-                            <div class="languageSelect-list-item">
-                                <a data-lang="en" href="https://the-immediateconnect.com/"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-gb"></div>
-                                    <div>English</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="de" href="https://the-immediateconnect.com/de"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-de"></div>
-                                    <div>German</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="es" href="https://the-immediateconnect.com/es"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-es"></div>
-                                    <div>Spanish</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="it" href="https://the-immediateconnect.com/it"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-it"></div>
-                                    <div>Italian</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="se" href="https://the-immediateconnect.com/se"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-se"></div>
-                                    <div>Swedish</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="tr" href="https://the-immediateconnect.com/tr"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-tr"></div>
-                                    <div>Turkish</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="nl" href="https://the-immediateconnect.com/nl"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-nl"></div>
-                                    <div>Dutch</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="pt" href="https://the-immediateconnect.com/pt"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-pt"></div>
-                                    <div>Portuguese</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="pl" href="https://the-immediateconnect.com/pl"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-pl"></div>
-                                    <div>Polish</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="no" href="https://the-immediateconnect.com/no"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-no"></div>
-                                    <div>Norwegian</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="dk" href="https://the-immediateconnect.com/dk"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-dk"></div>
-                                    <div>Danish</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="fi" href="https://the-immediateconnect.com/fi"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-fi"></div>
-                                    <div>Finnish</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="ru" href="https://the-immediateconnect.com/ru"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-ru"></div>
-                                    <div>Russian</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="th" href="https://the-immediateconnect.com/th"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-th"></div>
-                                    <div>Thai</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="ph" href="https://the-immediateconnect.com/ph"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-ph"></div>
-                                    <div>Filipino</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="ar" href="https://the-immediateconnect.com/ar"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-sa"></div>
-                                    <div>Arabic</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="cn" href="https://the-immediateconnect.com/cn"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-cn"></div>
-                                    <div>Chinese</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="in" href="https://the-immediateconnect.com/in"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-in"></div>
-                                    <div>Indian</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="kr" href="https://the-immediateconnect.com/kr"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-kr"></div>
-                                    <div>Korean</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="sk" href="https://the-immediateconnect.com/sk"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-sk"></div>
-                                    <div>Slovak</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="cs" href="https://the-immediateconnect.com/cs"
-                                   class="languageSelect-list-item-link selectedLanguage">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-cz"></div>
-                                    <div>Czech</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="ro" href="https://the-immediateconnect.com/ro"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-ro"></div>
-                                    <div>Romanian</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="hu" href="https://the-immediateconnect.com/hu"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-hu"></div>
-                                    <div>Hungarian</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="hr" href="https://the-immediateconnect.com/hr"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-hr"></div>
-                                    <div>Croatian</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="bg" href="https://the-immediateconnect.com/bg"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-bg"></div>
-                                    <div>Bulgarian</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="id" href="https://the-immediateconnect.com/id"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-id"></div>
-                                    <div>Indonesian</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="gr" href="https://the-immediateconnect.com/gr"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-gr"></div>
-                                    <div>Greek</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="fr" href="https://the-immediateconnect.com/fr"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-fr"></div>
-                                    <div>French</div>
-                                </a>
-                            </div>
-                            <div class="languageSelect-list-item">
-                                <a data-lang="jp" href="https://the-immediateconnect.com/jp"
-                                   class="languageSelect-list-item-link ">
-                                    <div class="languageSelect-list-item-link-flag flag-icon flag-icon-jp"></div>
-                                    <div>Japanese</div>
-                                </a>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -374,81 +203,231 @@
                     <img loading="lazy" src="logo.png"
                          alt="immediate connect 3.0 - Zdravím vás, nyní je vhodná chvíle zapojit se do obchodování a generovat značné zisky."
                          class="login_form-logo">
-                    <div class="form-box w-form-wrapper">
-                        <form id="email-form" name="email-form" data-name="Email Form"
-                              action="https://the-immediateconnect.com/cs/..\..\#" method="get" class="members-form"
-                              data-wf-page-id="62f224720e99ef2eaf21570b"
-                              data-wf-element-id="95b21510-7693-08f4-1da3-f3be31f27c50">
-                            <div class="form-group">
-                                <input type="text" class="form-control w-input" maxlength="256"
-                                       name="FunnelRegistrationForm[first_name]"
-                                       data-name="FunnelRegistrationForm[first_name]" placeholder="Jméno">
-                                <div class="warning-icon"></div>
+                    <form id="dr-form" name="dr-form" class="members-form form dr-form">
+
+                        <div class="form-group">
+                            <input oninput="validateFirstName(this)" required="" type="text" class="form-control w-input form__input first-name" maxlength="256"
+                                   name="first_name"
+                                   data-name="first_name" placeholder="Jméno">
+                            <div class="warning-icon"></div>
+                            <div class="error f-name">
+                                Vaše křestní jméno je příliš krátké (alespoň 2 znaky)
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control w-input" maxlength="256"
-                                       name="FunnelRegistrationForm[last_name]"
-                                       data-name="FunnelRegistrationForm[last_name]" placeholder="Příjmení">
-                                <div class="warning-icon"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control w-input" maxlength="256"
-                                       name="FunnelRegistrationForm[email]" data-name="FunnelRegistrationForm[email]"
-                                       placeholder="E-mailem">
-                                <div class="warning-icon"></div>
-                            </div>
-                            <div class="form-row-nowrap">
-                                <div class="form-cell">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control w-input" maxlength="256"
-                                               name="FunnelRegistrationForm[password]"
-                                               data-name="FunnelRegistrationForm[password]"
-                                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,12}$"
-                                               placeholder="Heslo">
-                                        <div class="warning-icon"></div>
-                                    </div>
-                                </div>
-                                <div class="form-cell">
-                                    <div class="button generate-pass">Generovat hesla</div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control w-input" maxlength="256"
-                                       name="FunnelRegistrationForm[country]"
-                                       data-name="FunnelRegistrationForm[country]" placeholder="Země">
-                                <div class="warning-icon"></div>
-                            </div>
-                            <div class="phone-row">
-                                <div class="prefix-cell">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control w-input" maxlength="256"
-                                               name="FunnelRegistrationForm[phone_prefix]"
-                                               data-name="FunnelRegistrationForm[phone_prefix]" placeholder="Předpona">
-                                        <div class="warning-icon"></div>
-                                    </div>
-                                </div>
-                                <div class="phone-cell">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control w-input" maxlength="256"
-                                               name="FunnelRegistrationForm[phone_number]"
-                                               data-name="FunnelRegistrationForm[phone_number]" placeholder="Telefon">
-                                        <div class="warning-icon"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" data-wait="Prosím, čekejte..." class="button fullwidth w-button"
-                                    disabled>Transformujte svůj život – získejte okamžitý přístup
-                            </button>
-                            <div class="scenario-input w-embed"><input type="hidden" name="scenario"
-                                                                       value="_user_registration_without_phone"></div>
-                        </form>
-                        <div class="w-form-done">
-                            <div>Thank you! Your submission has been received!</div>
                         </div>
-                        <div class="w-form-fail">
-                            <div>Oops! Something went wrong while submitting the form.</div>
+
+                        <div class="form-group">
+                            <input oninput="validateLastName(this)" required="" type="text" class="form-control w-input form__input last-name" maxlength="256"
+                                   name="last_name"
+                                   data-name="last_name" placeholder="Příjmení">
+                            <div class="warning-icon"></div>
+                            <div class="error l-name">
+                                Vaše příjmení je příliš krátké (alespoň 2 znaky)
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="form-group">
+                            <input oninput="validateEmail(this)" required="" type="email" class="form-control w-input form__input email" maxlength="256"
+                                   name="email" data-name="email"
+                                   placeholder="E-mailem">
+                            <div class="warning-icon"></div>
+                            <div class="error email">
+                                Zadejte prosím svou skutečnou e-mailovou adresu (příklad@email.com)
+                            </div>
+                        </div>
+
+                        <div class="phone-row flag">
+                            <div class="prefix-cell1 flag">
+                                <div class="form-group flag">
+                                    <img style="width: 20px; height: 14px" src="flag-icon.svg" alt="flag">
+                                    <span class="form__input area_code">+420</span>
+                                </div>
+                                <style>
+                                    .phone-row.flag {
+                                        margin: 0;
+                                        margin-bottom: 10px;
+                                    }
+
+                                    .phone-row.flag {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        /*height: 40px;*/
+                                        margin-bottom: 10px;
+                                        color: #000;
+                                        border-radius: 5px;
+                                    }
+
+                                    .prefix-cell1.flag {
+                                        border: 1px solid #c2c2c2;
+                                        height: 40px;
+                                        display: flex;
+                                        gap: 6px;
+                                        padding: 0 10px;
+                                        border-radius: 5px;
+                                        width: 95px;
+                                        align-items: center;
+                                    }
+
+                                    .form-group.flag {
+                                        height: 40px;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 6px;
+                                    }
+
+                                    .flag span {
+                                        font-size: 16px;
+                                        font-weight: 400;
+                                        color: rgb(0, 0, 0);
+                                    }
+                                    .phone-cell1 {
+                                        width: calc(100% - 105px);
+                                    }
+                                </style>
+                            </div>
+                            <div class="phone-cell1">
+                                <div class="form-group">
+                                    <input oninput="validatePhone(this)" required="" type="tel" class="form-control w-input form__input phone"
+                                           maxlength="9"
+                                           name="phone_number"
+                                           data-name="phone_number" placeholder="Telefon">
+                                    <div class="warning-icon"></div>
+                                </div>
+                            </div>
+                            <div class="tel error" data-error-status="inactive" data-for-error="phone">
+                                Zadávejte prosím pouze čísla
+                            </div>
+                        </div>
+                        <button type="submit" data-wait="Prosím, čekejte..."
+                                class="button fullwidth w-button main-form-btn">
+                            Transformujte svůj život – získejte okamžitý přístup
+                        </button>
+                        <div class="scenario-input w-embed"><input type="hidden" name="scenario"
+                                                                   value="_user_registration_without_phone"></div>
+                        <div class="form-footer">Registrací a vytvořením účtu potvrzujete, že jste si přečetli naše
+                            <a href="terms.html" target="_blank">Smluvní podmínky</a> a <a href="privacy.html"
+                                                                                           target="_blank">Zásady
+                                ochrany osobních údajů</a> a Zásady <a href="cookie.html" target="_blank">používání
+                                souborů cookie</a> a souhlasíte s nimi.
+                            <div class="members-form-policy-divider flag">i</div>
+                            <style>
+                                .members-form-policy-divider.flag {
+                                    display: inline-block;
+                                    width: 14px;
+                                    height: 14px;
+                                    font-size: 12px;
+                                    line-height: 14px;
+                                    text-align: center;
+                                    border-radius: 50%;
+                                    background: #2595ed;
+                                    color: #fff;
+                                    cursor: pointer;
+                                    transition: .3s;
+                                }
+                            </style>
+                            <div class="members-form-policy-tooltip" style="display: none;"><b>Poznámka:</b> v
+                                souladu s našimi Zásadami ochrany osobních údajů mohou být některé informace, které
+                                nám poskytnete, sdíleny s našimi prodejci, partnery, smluvními partnery, inzerenty
+                                a/nebo přidruženými společnostmi jako součást našich služeb a/nebo inzerentů těchto
+                                dodavatelů, partnerů, smluvních partnerů. a/nebo služby přidružených společností.
+                            </div>
+                        </div>
+                        <style>
+                            .error {
+                                width: 100%;
+                                font-weight: 400;
+                                margin-bottom: 10px;
+                                padding: 5px;
+                                color: #fff;
+                                background-color: #eb162b;
+                                font-size: 12px;
+                                display: none;
+                            }
+                            .dr-form {
+                                position: relative;
+                                margin-top: 10px;
+                            }
+                            .loader-sub {
+                                position: absolute;
+                                height: 100%;
+                                width: 100%;
+                                top: 0;
+                                background: #0006;
+                                color: #fff;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                                flex-direction: column;
+                                display: none;
+                            }
+                        </style>
+                        <script>
+                            const displayError = (errorElement, message) => {
+                                // errorElement.textContent = message;
+                                errorElement.style.display = 'block';
+                            };
+
+                            const hideError = (errorElement) => {
+                                // errorElement.textContent = '';
+                                errorElement.style.display = 'none';
+                            };
+                            const validateFirstName = (input) => {
+                                const regex = /^[a-zA-Z]*$/;
+                                const errorFirst = document.querySelector('.error.f-name');
+
+                                if (!regex.test(input.value)) {
+                                    displayError(errorFirst);
+                                    input.value = input.value.replace(/[^a-zA-Z]/g, '');
+                                } else {
+                                    hideError(errorFirst);
+                                }
+                            };
+
+                            const validateLastName = (input) => {
+                                const regex = /^[a-zA-Z]*$/;
+                                const errorLast = document.querySelector('.error.l-name');
+
+                                if (!regex.test(input.value)) {
+                                    displayError(errorLast,);
+                                    input.value = input.value.replace(/[^a-zA-Z]/g, '');
+                                } else {
+                                    hideError(errorLast);
+                                }
+                            };
+
+                            const validateEmail = (input) => {
+                                const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                                const errorEmail = document.querySelector('.error.email');
+
+                                if (!regex.test(input.value)) {
+                                    displayError(errorEmail);
+                                } else {
+                                    hideError(errorEmail);
+                                }
+                            };
+
+                            const validatePhone = (input) => {
+                                const regex = /^\d{9,}$/;
+                                const errorPhone = document.querySelector('.tel.error');
+
+                                if (!regex.test(input.value)) {
+                                    displayError(errorPhone);
+                                } else {
+                                    hideError(errorPhone);
+                                }
+                            };
+
+                        </script>
+                        <div class="loader-sub" id="loader-sub">
+                            Děkujeme za vyplnění
+                            <br>
+                            kontaktního formuláře,
+                            <br>
+                            vaše údaje
+                            <br>
+                            budou zpracovány do <span id="countdown">5</span> sekund.
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -507,18 +486,18 @@
 <script type="text/javascript">WebFont.load({google: {families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Roboto:regular,700&display=swap"]}});</script>
 <div style="display: none">SB2.0 2023-08-29 15:55:15</div>
 <script async src="languageSwitcher.js"></script>
-<script>
-    const apiPath = window.location.protocol + '//api.' + window.location.hostname;
-    const script = document.createElement('script');
-    script.src = apiPath + '/dist/js/loader.js';
-    document.body.appendChild(script);
+<!--<script>-->
+<!--    const apiPath = window.location.protocol + '//api.' + window.location.hostname;-->
+<!--    const script = document.createElement('script');-->
+<!--    script.src = apiPath + '/dist/js/loader.js';-->
+<!--    document.body.appendChild(script);-->
 
-    const styles = document.createElement('link');
-    styles.href = apiPath + '/dist/css/integration.css';
-    styles.rel = "stylesheet";
-    styles.type = "text/css";
-    document.body.appendChild(styles);
-</script>
+<!--    const styles = document.createElement('link');-->
+<!--    styles.href = apiPath + '/dist/css/integration.css';-->
+<!--    styles.rel = "stylesheet";-->
+<!--    styles.type = "text/css";-->
+<!--    document.body.appendChild(styles);-->
+<!--</script>-->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css" rel="stylesheet"
       media="print" onload="this.media='all'">
 <style>
@@ -580,5 +559,7 @@
         startTimer(time, display);
     })(jQuery);
 </script>
+<script type="text/javascript" src="getData.js"></script>
+<script type="text/javascript" src="send.js"></script>
 </body>
 </html>
