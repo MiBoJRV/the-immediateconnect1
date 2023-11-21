@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
             Page: 'the-immediateconnect',
         };
 
+        // APIKEY: TnpFMU5sODFNVEJmTnpFMU5sOD0=
+        // PASS: FiLurGU71q
+        // CAMPAIGN ID: 10853
+
         const apiUrl = 'https://tracker.pablo.partners/repost.php?act=register';
 
         function encodeFormData(data) {
