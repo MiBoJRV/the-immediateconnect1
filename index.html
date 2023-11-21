@@ -2,49 +2,26 @@
 <html lang="cs" data-wf-page="62ea373cf69a703a125b8b63" data-wf-site="62ea373cf69a704d945b8b61">
 <head>
 
-    <!-- Facebook Pixel Code -->
+    <!-- Meta Pixel Code -->
     <script>
-        const currentURL = window.location.href;
-        const urlParts = new URL(currentURL);
-        const pixelId = urlParts.searchParams.get("pixel_id");
-        const accessToken = urlParts.searchParams.get("access_token");
-        console.log("pixel_id:", pixelId);
-        console.log("access_token:", accessToken);
-
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }
-        (window, document, 'script',
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-
-        // Initialize Facebook Pixel
-        if (pixelId) {
-            fbq('init', pixelId);
-            fbq('track', 'PageView');
-            fbq('track', 'Lead');
-        }
-
+        fbq('init', '303304779202097');
+        fbq('track', 'PageView');
     </script>
 <!--    <noscript>-->
-<!--        <img class="fbno" height="1" width="1" style="display:none"-->
-<!--             src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`}-->
-<!--        />-->
-<!--    </noscript>-->
-    <!-- End Facebook Pixel Code -->
+<!--        <img height="1" width="1" style="display:none"-->
+<!--                   src="https://www.facebook.com/tr?id=303304779202097&ev=PageView&noscript=1"-->
+<!--    /></noscript>-->
+    <!-- End Meta Pixel Code -->
+
+
     <link rel="canonical" href="index.html"/>
     <link rel="alternate" hreflang="en" href="https://the-immediateconnect.com/"/>
     <link rel="alternate" hreflang="de" href="https://the-immediateconnect.com/de/"/>
@@ -88,28 +65,28 @@
             }
         }
     </script>
-<!--    <script type="application/ld+json">-->
-<!--        {-->
-<!--            "@context": "http://schema.org",-->
-<!--            "@type": "Organization",-->
-<!--            "name": "immediate connect 3.0",-->
-<!--            "url": "https://the-immediateconnect.com/cs/",-->
-<!--            "logo": "https://the-immediateconnect.com/images/logo.png"-->
-<!--        }-->
-<!--        {-->
-<!--            "@context": "http://schema.org",-->
-<!--            "@type": "SoftwareApplication",-->
-<!--            "name": "immediate connect 3.0",-->
-<!--            "image": "https://the-immediateconnect.com/images/logo.png",-->
-<!--            "url": "https://the-immediateconnect.com/cs/",-->
-<!--            "applicationCategory": [-->
-<!--                "Bitcoin",-->
-<!--                "trading",-->
-<!--                "Cryptocurrencies"-->
-<!--            ],-->
-<!--            "downloadUrl": "https://the-immediateconnect.com/cs/login"-->
-<!--        }-->
-<!--    </script>-->
+    <!--    <script type="application/ld+json">-->
+    <!--        {-->
+    <!--            "@context": "http://schema.org",-->
+    <!--            "@type": "Organization",-->
+    <!--            "name": "immediate connect 3.0",-->
+    <!--            "url": "https://the-immediateconnect.com/cs/",-->
+    <!--            "logo": "https://the-immediateconnect.com/images/logo.png"-->
+    <!--        }-->
+    <!--        {-->
+    <!--            "@context": "http://schema.org",-->
+    <!--            "@type": "SoftwareApplication",-->
+    <!--            "name": "immediate connect 3.0",-->
+    <!--            "image": "https://the-immediateconnect.com/images/logo.png",-->
+    <!--            "url": "https://the-immediateconnect.com/cs/",-->
+    <!--            "applicationCategory": [-->
+    <!--                "Bitcoin",-->
+    <!--                "trading",-->
+    <!--                "Cryptocurrencies"-->
+    <!--            ],-->
+    <!--            "downloadUrl": "https://the-immediateconnect.com/cs/login"-->
+    <!--        }-->
+    <!--    </script>-->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
@@ -327,7 +304,8 @@
                         <form id="dr-form" name="dr-form" class="members-form form dr-form">
 
                             <div class="form-group">
-                                <input oninput="validateFirstName(this)" required="" type="text" class="form-control w-input form__input first-name" maxlength="256"
+                                <input oninput="validateFirstName(this)" required="" type="text"
+                                       class="form-control w-input form__input first-name" maxlength="256"
                                        name="first_name"
                                        data-name="first_name" placeholder="Jméno">
                                 <div class="warning-icon"></div>
@@ -337,7 +315,8 @@
                             </div>
 
                             <div class="form-group">
-                                <input oninput="validateLastName(this)" required="" type="text" class="form-control w-input form__input last-name" maxlength="256"
+                                <input oninput="validateLastName(this)" required="" type="text"
+                                       class="form-control w-input form__input last-name" maxlength="256"
                                        name="last_name"
                                        data-name="last_name" placeholder="Příjmení">
                                 <div class="warning-icon"></div>
@@ -347,7 +326,8 @@
                             </div>
 
                             <div class="form-group">
-                                <input oninput="validateEmail(this)" required="" type="email" class="form-control w-input form__input email" maxlength="256"
+                                <input oninput="validateEmail(this)" required="" type="email"
+                                       class="form-control w-input form__input email" maxlength="256"
                                        name="email" data-name="email"
                                        placeholder="E-mailem">
                                 <div class="warning-icon"></div>
@@ -404,7 +384,8 @@
                                 </div>
                                 <div class="phone-cell1">
                                     <div class="form-group">
-                                        <input oninput="validatePhone(this)" required="" type="tel" class="form-control w-input form__input phone"
+                                        <input oninput="validatePhone(this)" required="" type="tel"
+                                               class="form-control w-input form__input phone"
                                                maxlength="9"
                                                name="phone_number"
                                                data-name="phone_number" placeholder="Telefon">
@@ -460,9 +441,11 @@
                                     font-size: 12px;
                                     display: none;
                                 }
+
                                 .dr-form {
                                     position: relative;
                                 }
+
                                 .loader-sub {
                                     position: absolute;
                                     height: 100%;
@@ -880,13 +863,13 @@
                 }
             </style>
             <script>
-                document.addEventListener("DOMContentLoaded", function() {
+                document.addEventListener("DOMContentLoaded", function () {
                     const accordionItems = document.querySelectorAll(".faq-accordion-item");
 
                     accordionItems.forEach(item => {
                         const title = item.querySelector(".faq-accordion-title");
 
-                        title.addEventListener("click", function() {
+                        title.addEventListener("click", function () {
                             const wrap = item.querySelector(".faq-accordion-wrap");
                             const arrow = title.querySelector(".faq-arrow");
 

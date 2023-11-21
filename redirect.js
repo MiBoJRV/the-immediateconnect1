@@ -71,10 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     // const redirectUrl = responseJson.url;
                     // window.location.href = redirectUrl;
                     // Первый редирект через 0 секунд (мгновенный)
-                    localStorage.setItem('responseJson', JSON.stringify(responseJson));
                     window.location.href = 'thank-you.html';
 
-                    new Promise(resolve => setTimeout(resolve, 1000))
+                    new Promise(resolve => setTimeout(resolve, 2000))
                         .then(() => {
                             const redirectUrl = responseJson.url;
                             window.location.href = redirectUrl;
